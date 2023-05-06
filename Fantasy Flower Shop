@@ -1,0 +1,30 @@
+--Create a fantasy flower shop database
+
+create table Stock (id integer primary key, name text, price integer, quantity integer, season text);
+
+insert into stock values (1, "Roses", 12.00, 300, "summer");
+insert into stock values (2, "Lilies", 7.00, 4000, "spring");
+insert into stock values (3, "Daisies", 0.50, 20, "summer");
+insert into stock values (4, "Grape Hyacinth", 2.00, 50, "winter");
+insert into stock values (5, "Lemon Trees", 50.00, 10, "summer");
+insert into stock values (6, "Orange Trees", 75.00, 50, "spring");
+insert into stock values (7, "Hydrangeas", 5.50, 7, "summer");
+insert into stock values (8, "Violets", 1.00, 25, "autumn");
+insert into stock values (9, "Pansies", 2.00, 33, "spring");
+insert into stock values (10, "Cacti", 5.75, 29, "summer");
+insert into stock values (11, "Succulents", 18.00, 76, "spring");
+insert into stock values (12, "Fire Heart", 6000.00, 1, "winter");
+insert into stock values (13, "Ice Heart", 4400.00, 1, "summer");
+insert into stock values (14, "Tepid Heart", 2000.00, 1, "autumn");
+insert into stock values (15, "LukeWarm Heart", 1500.00, 1, "spring");
+
+--display the database ordered by price
+
+select * from stock order by price;
+
+--display the options available in spring
+
+select * from stock where season = "spring";
+
+--what is the total amount of items in the shop
+select sum(quantity) from stock
